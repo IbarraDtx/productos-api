@@ -15,4 +15,5 @@ const productosRoutes = require('./routes/productos');
 app.use('/API/productos', productosRoutes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
+const LOCAL_IP = '0.0.0.0';
+app.listen(PORT, LOCAL_IP, () => console.log(`Servidor corriendo en http://${LOCAL_IP}:${PORT}`));
